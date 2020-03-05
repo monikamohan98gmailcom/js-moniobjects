@@ -99,3 +99,52 @@ console.log('object is: '+person.name);
 console.log(person.getId());
 person.setID(2);
 console.log(person.getId())
+
+
+//--------------------------------------------
+// task
+function objdetails(name,m1,m2,m3){
+    this.name=name;
+    this.m1=m1;
+    this.m2=m2;
+    this.m3=m3;
+}
+
+function objtotals(objdetail){
+    this.name=objdetail.name;
+    this.total=parseInt(objdetail.m1)+parseInt(objdetail.m2)+parseInt(objdetail.m3);
+} 
+
+function objavgs(objtotal){
+    this.avg=(parseInt(objtotal.total))/3
+    
+}
+function totdetails(objtotal,objavg)
+{
+    this.name=objtotal.name;
+    this.total=objtotal.total;
+    this.avg=objavg.avg
+    
+}
+var name=prompt('Enter the name: ')
+var m1=prompt('Mark 1')
+if(isNaN(m1)){
+    alert('Enter valid values')
+}
+else{
+  var m2=prompt('Mark 2')
+  if(isNaN(m2)) 
+    alert('Enter valid values')
+  else{ var m3=prompt('Mark 3') 
+if(isNaN(m3)) alert('Enter valid values')
+else{
+    const objdetail=new objdetails(name,m1,m2,m3);
+    console.log(objdetail)
+    const objtotal=new objtotals(objdetail);
+    console.log(objtotal)
+    const objavg=new objavgs(objtotal);
+    console.log(objavg);
+    const totdetail=new totdetails(objtotal,objavg)
+    console.log(totdetail)
+}
+}}
