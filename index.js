@@ -69,5 +69,33 @@ object.setFamousBooks('The legacy')
 const setname=object.getName().Famous_books;
 console.log(setname) //output=The legacy
 
+// obj={a:this,
+//     fn(){
+//       console.log(this); 
+//       return {c:this,
+//                fn1(){
+//                  console.log(this);
+//                  }
+//               }
+//         }
+//     }
+
 //------------------------------------
 //object creation using function
+function People(){
+  let id=1; //let,const,var are private keywords
+  this.name='monika';
+  this.getId=function(){
+    return id;
+  }
+  this.setID=function(id1){
+    id=id1;
+  }
+}
+
+const person=new People()
+console.log('object is: '+person.name);
+//to get the private variables,use getmethod
+console.log(person.getId());
+person.setID(2);
+console.log(person.getId())
