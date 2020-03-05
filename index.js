@@ -128,16 +128,20 @@ function totdetails(objtotal,objavg)
 }
 var name=prompt('Enter the name: ')
 var m1=prompt('Mark 1')
-if(isNaN(m1)){
-    alert('Enter valid values')
+while(isNaN(m1)===true){
+    alert('Enter the valid value')
+    m1=prompt('Mark 1')
 }
-else{
-  var m2=prompt('Mark 2')
-  if(isNaN(m2)) 
-    alert('Enter valid values')
-  else{ var m3=prompt('Mark 3') 
-if(isNaN(m3)) alert('Enter valid values')
-else{
+var m2=prompt('Mark 2')
+while(isNaN(m2)===true){
+    alert('Enter the valid value')
+    m2=prompt('Mark 2')
+}
+var m3=prompt('Mark 3')
+while(isNaN(m3)===true){
+    alert('Enter the valid value')
+    m3=prompt('Mark 3')
+}
     const objdetail=new objdetails(name,m1,m2,m3);
     console.log(objdetail)
     const objtotal=new objtotals(objdetail);
@@ -146,5 +150,3 @@ else{
     console.log(objavg);
     const totdetail=new totdetails(objtotal,objavg)
     console.log(totdetail)
-}
-}}
