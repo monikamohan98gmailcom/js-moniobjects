@@ -11,7 +11,7 @@ const object={
   getName: function(){
     return this
   },
-  //setting the name with the arg value
+  //setting  with the arg value
   setName:function(name){ 
     this.title=name
   },
@@ -31,7 +31,6 @@ const object={
     this.Famous_books=fb
   }
 }
-//getting the name from the function
 const name=object.getName().title;
 console.log(name)  //output=Hipple
 object.setName('Monika book')
