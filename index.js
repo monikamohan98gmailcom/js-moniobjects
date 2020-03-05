@@ -1,3 +1,4 @@
+//object creation with braces
 //declaring object with key value pairs
 const object={
   title:'Hipple',
@@ -70,3 +71,4 @@ const setname=object.getName().Famous_books;
 console.log(setname) //output=The legacy
 
 //------------------------------------
+//object creation using function
